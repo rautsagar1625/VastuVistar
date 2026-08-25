@@ -11,7 +11,7 @@ import Marquee from "@/components/Marquee";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import EnquiryForm from "@/components/EnquiryForm";
 import {
-  IMG, INDUSTRIES, TESTIMONIALS, PROJECTS, PROCESS_STEPS, STATS, COMPANY,
+  IMG, INDUSTRIES, CLIENTS, TESTIMONIALS, PROJECTS, PROCESS_STEPS, STATS, COMPANY,
 } from "@/data/content";
 
 const ICONS = { Factory, Building2, Home: HomeIcon, Landmark };
@@ -374,6 +374,37 @@ export default function Home() {
               View Full Portfolio
             </Link>
           </Reveal>
+        </div>
+      </section>
+
+      {/* CLIENTS */}
+      <section data-testid="clients-section" className="py-[100px] max-md:py-[60px] bg-cloud">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <Reveal>
+            <Label>Our Clients</Label>
+            <h2 className="display-heavy text-navy text-3xl md:text-[44px] mt-6">
+              Trusted by
+            </h2>
+            <p className="text-[15px] text-slate/80 mt-4 max-w-[560px] leading-relaxed">
+              Manufacturers, developers and infrastructure firms who have handed us a site and
+              taken back a finished building.
+            </p>
+          </Reveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mt-14">
+            {CLIENTS.map((client, i) => (
+              <Reveal key={client.name} delay={i * 0.05} className="h-full">
+                <div
+                  data-testid={`client-${client.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}
+                  className="h-full border-t-2 border-amber pt-5"
+                >
+                  <h3 className="display-heavy text-ink text-base md:text-lg leading-snug">
+                    {client.name}
+                  </h3>
+                  <span className="eyebrow text-slate/50 mt-2 block">{client.sector}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

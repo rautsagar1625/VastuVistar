@@ -217,6 +217,16 @@ export const INDUSTRIES = [
   },
 ];
 
+export const CLIENTS = [
+  { name: "Ram Engineering", sector: "Industrial" },
+  { name: "Bindra's Kitchen", sector: "Commercial" },
+  { name: "Harshovgal Trans", sector: "Logistics" },
+  { name: "Jal", sector: "Infrastructure" },
+  { name: "Victora Auto", sector: "Industrial" },
+  { name: "Asiatech Coatings Pvt. Ltd.", sector: "Industrial" },
+  { name: "Lalwani Infra", sector: "Infrastructure" },
+];
+
 export const VISION =
   "To be a trusted partner in industrial and commercial development by delivering reliable, cost-effective and structurally superior construction solutions — redefining construction standards by combining advanced engineering, quality craftsmanship and modern technology to create durable, efficient and future-ready structures.";
 
