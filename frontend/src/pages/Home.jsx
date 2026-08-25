@@ -52,7 +52,7 @@ function MaskLine({ children, delay }) {
   );
 }
 
-function CountUp({ value, suffix = "" }) {
+function CountUp({ value, suffix = "", decimals = 0 }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-10% 0px" });
   const [n, setN] = useState(0);
@@ -63,7 +63,7 @@ function CountUp({ value, suffix = "" }) {
     let frame;
     const tick = (t) => {
       const p = Math.min((t - start) / dur, 1);
-      setN(Math.round(value * (1 - Math.pow(1 - p, 3))));
+      setN(value * (1 - Math.pow(1 - p, 3)));
       if (p < 1) frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
@@ -71,7 +71,7 @@ function CountUp({ value, suffix = "" }) {
   }, [inView, value]);
   return (
     <span ref={ref}>
-      {n}
+      {n.toFixed(decimals)}
       {suffix}
     </span>
   );
@@ -198,7 +198,7 @@ export default function Home() {
               className={`py-10 lg:py-14 px-4 lg:px-10 text-center ${i > 0 ? "lg:border-l lg:border-white/20" : ""} ${i % 2 === 1 ? "max-lg:border-l max-lg:border-white/20" : ""} ${i > 1 ? "max-lg:border-t max-lg:border-white/20" : ""}`}
             >
               <div className="display-heavy text-5xl lg:text-[56px] text-amber leading-none" data-testid={`stat-value-${i}`}>
-                {s.text ? s.text : <CountUp value={s.value} suffix={s.suffix} />}
+                {s.text ? s.text : <CountUp value={s.value} suffix={s.suffix} decimals={s.decimals} />}
               </div>
               <div className="eyebrow text-white/75 mt-3">{s.label}</div>
             </div>

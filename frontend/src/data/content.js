@@ -12,14 +12,15 @@ export const COMPANY = {
 };
 
 export const CONTACT = {
-  phone: "+91 96379 67171",
-  phoneHref: "tel:+919637967171",
-  phoneAlt: "+91 97666 78282",
-  phoneAltHref: "tel:+919766678282",
-  whatsapp: "https://wa.me/919637967171",
-  email: "Vastuvistarllp@gmail.com",
-  careersEmail: "Vastuvistarllp@gmail.com",
-  address: "Pune, Maharashtra, India",
+  /* Primary enquiry line. */
+  phone: "+91 97666 78282",
+  phoneHref: "tel:+919766678282",
+  phoneAlt: "+91 96379 67171",
+  phoneAltHref: "tel:+919637967171",
+  whatsapp: "https://wa.me/919766678282",
+  email: "Vastuvistarinfra@gmail.com",
+  careersEmail: "Vastuvistarinfra@gmail.com",
+  address: "Near Kotak Bank, Ghawane Complex, Sanaswadi, Pune 412208",
   hours: "Monday – Saturday · 9:30 – 18:30 IST",
 };
 
@@ -519,8 +520,8 @@ export const PROJECTS = [
 ];
 
 export const STATS = [
-  { value: 120, suffix: "+", label: "Projects Delivered" },
+  { value: 18, suffix: "+", label: "Projects Delivered" },
   { value: 6, suffix: "", label: "Service Verticals" },
-  { value: 25, suffix: "L+", label: "Sq.Ft Built" },
-  { value: 100, suffix: "%", label: "Single-Point Accountability" },
+  { value: 7.5, decimals: 1, suffix: "L+", label: "Sq.Ft Built-up" },
+  { value: 100, suffix: "%", label: "Completion Rate" },
 ];

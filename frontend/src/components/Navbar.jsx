@@ -47,7 +47,7 @@ export default function Navbar() {
             {/* badge occupies this slot; spacer keeps the row aligned */}
             <div className={`shrink-0 transition-[width] duration-300 ${scrolled ? "w-[168px]" : "w-[196px]"}`} />
 
-            <nav className="hidden lg:flex items-center gap-9 mx-auto" aria-label="Primary">
+            <nav className="hidden lg:flex items-center gap-10 mx-auto" aria-label="Primary">
               {LINKS.map((l) => (
                 <NavLink
                   key={l.to}
@@ -55,7 +55,7 @@ export default function Navbar() {
                   end={l.to === "/"}
                   data-testid={`nav-link-${l.label.toLowerCase().replace(/[^a-z]+/g, "-")}`}
                   className={({ isActive }) =>
-                    `relative py-2 font-sans text-[13.5px] font-semibold tracking-wide transition-colors duration-200
+                    `relative py-2 font-sans text-[15px] font-semibold tracking-wide transition-colors duration-200
                      after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-[3px] after:bg-amber
                      after:origin-left after:transition-transform after:duration-200 ${
                        isActive
@@ -73,18 +73,18 @@ export default function Navbar() {
               <a
                 href={CONTACT.phoneHref}
                 data-testid="nav-phone"
-                className="inline-flex items-center gap-2 text-[13px] font-semibold text-white/85 hover:text-white transition-colors duration-200"
+                className="inline-flex items-center gap-2 text-[14.5px] font-semibold text-white/85 hover:text-white transition-colors duration-200"
               >
-                <Phone size={15} strokeWidth={2} />
+                <Phone size={17} strokeWidth={2} />
                 {CONTACT.phone}
               </a>
               <Link
                 to="/contact"
                 data-testid="get-quote-btn"
-                className="group inline-flex items-center gap-2 h-11 pl-6 pr-5 rounded-full bg-amber text-ink font-sans text-[13px] font-bold tracking-wide transition-colors duration-200 hover:bg-amber-dark"
+                className="group inline-flex items-center gap-2 h-12 pl-7 pr-6 rounded-full bg-amber text-ink font-sans text-[14.5px] font-bold tracking-wide transition-colors duration-200 hover:bg-amber-dark"
               >
                 Get a Quote
-                <ArrowRight size={15} strokeWidth={2.5} className="transition-transform duration-200 group-hover:translate-x-0.5" />
+                <ArrowRight size={16} strokeWidth={2.5} className="transition-transform duration-200 group-hover:translate-x-0.5" />
               </Link>
             </div>
 
@@ -107,9 +107,9 @@ export default function Navbar() {
               data-testid="nav-logo"
               className={`pointer-events-auto relative block bg-white shadow-[0_14px_34px_rgba(10,20,35,0.30)]
                 flex items-center justify-center transition-[width,height] duration-300
-                ${scrolled ? "w-[152px] h-[86px] lg:w-[168px] lg:h-[92px]" : "w-[164px] h-[100px] lg:w-[196px] lg:h-[116px]"}`}
+                ${scrolled ? "w-[160px] h-[86px] lg:w-[168px] lg:h-[92px]" : "w-[176px] h-[104px] lg:w-[196px] lg:h-[116px]"}`}
             >
-              <Logo height={scrolled ? 40 : 50} className="px-3" />
+              <Logo height={scrolled ? 54 : 70} className="px-2" />
               <span className="absolute left-0 right-0 bottom-0 h-[5px] bg-amber" aria-hidden="true" />
             </Link>
           </div>
@@ -128,7 +128,7 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between px-6 h-[78px]">
               <span className="bg-white px-3 py-2 shadow-[0_10px_24px_rgba(10,20,35,0.28)] relative">
-                <Logo height={38} />
+                <Logo height={48} />
                 <span className="absolute left-0 right-0 bottom-0 h-[4px] bg-amber" aria-hidden="true" />
               </span>
               <button
