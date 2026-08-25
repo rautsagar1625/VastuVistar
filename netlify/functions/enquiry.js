@@ -51,6 +51,12 @@ function throttled(ip) {
 }
 
 exports.handler = async (event) => {
+  /* Deploy check: says whether the function can see its API key, without
+     sending anything. Reports a boolean only — never the key itself. */
+  if (event.httpMethod === "GET" && (event.queryStringParameters || {}).health === "1") {
+    return json(200, { ok: true, configured: Boolean(process.env.RESEND_API_KEY) });
+  }
+
   if (event.httpMethod !== "POST") {
     return json(405, { error: "Method not allowed" });
   }
