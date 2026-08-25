@@ -218,13 +218,19 @@ export const INDUSTRIES = [
 ];
 
 export const CLIENTS = [
-  { name: "Ram Engineering", sector: "Industrial" },
-  { name: "Bindra's Kitchen", sector: "Commercial" },
-  { name: "Harshovgal Trans", sector: "Logistics" },
-  { name: "Jal", sector: "Infrastructure" },
-  { name: "Victora Auto", sector: "Industrial" },
-  { name: "Asiatech Coatings Pvt. Ltd.", sector: "Industrial" },
-  { name: "Lalwani Infra", sector: "Infrastructure" },
+  "Ram Engineering",
+  "Bindras Kitchen",
+  "Harshovgal Trans",
+  "Jal",
+  "Victora Auto",
+  "Asiatech Coatings Pvt. Ltd.",
+  "Lalwani Infra",
+  "A2G Realty LLP",
+  "Avni Infra",
+  "Kunj Glass Pvt Ltd",
+  "UGC Supply Chain Solutions Pvt Ltd",
+  "Trimitee Infra",
+  "Delta Estates",
 ];
 
 export const VISION =

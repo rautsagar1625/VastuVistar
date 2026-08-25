@@ -392,15 +392,14 @@ export default function Home() {
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mt-14">
             {CLIENTS.map((client, i) => (
-              <Reveal key={client.name} delay={i * 0.05} className="h-full">
+              <Reveal key={client} delay={i * 0.04} className="h-full">
                 <div
-                  data-testid={`client-${client.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}
+                  data-testid={`client-${client.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}
                   className="h-full border-t-2 border-amber pt-5"
                 >
                   <h3 className="display-heavy text-ink text-base md:text-lg leading-snug">
-                    {client.name}
+                    {client}
                   </h3>
-                  <span className="eyebrow text-slate/50 mt-2 block">{client.sector}</span>
                 </div>
               </Reveal>
             ))}
