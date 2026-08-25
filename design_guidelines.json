@@ -1,0 +1,76 @@
+{
+  "project_name": "Vastu Vistar LLP",
+  "app_type": "static_marketing_site",
+  "art_direction": {
+    "philosophy": "All under one roof.",
+    "theme": "Palette rebuilt around the company logo: amber/gold as the leading accent and charcoal as the dark surface, with the requested blue and white retained as a full part of the system. Heavy lowercase display headings on white, full-bleed blue panels for the process and vision/mission, charcoal panels for footer and testimonials, amber for buttons, numerals, icon plates and rules.",
+    "signature_element": "Blueprint grid on dark and tinted panels; rising circle staircase for the development process; amber rules under headings.",
+    "border_radius": "Near-sharp (2-4px); circles only where the deck uses them",
+    "shadows": "Soft blue-tinted shadows only"
+  },
+  "color_tokens": {
+    "background": {
+      "primary": "#FFFFFF",
+      "alt": "#F2F5FA",
+      "dark": "#1C2431",
+      "blue_panel": "#0A4DE0",
+      "amber_panel": "#F5A623"
+    },
+    "text": {
+      "heading_light": "#1C2431",
+      "heading_dark": "#FFFFFF",
+      "body": "#48546A",
+      "on_amber": "#141A24"
+    },
+    "accent": {
+      "primary_amber": "#F5A623",
+      "amber_dark": "#D98910",
+      "secondary_blue": "#0A4DE0",
+      "blue_dark": "#0838A8"
+    },
+    "border": {
+      "divider": "#D6DDE8",
+      "dark_divider": "rgba(255,255,255,0.10)"
+    }
+  },
+  "typography": {
+    "families": {
+      "heading": "'Archivo', Inter, sans-serif (weights 600-900)",
+      "body": "'Inter', sans-serif"
+    },
+    "treatment": "Headings use the .display-heavy utility \u2014 extrabold, tight tracking (-0.03em), often lowercase to match the deck ('about us', 'vision', 'mission'). No serif, no italics.",
+    "eyebrow": "11px, uppercase, 0.18em tracking, semibold"
+  },
+  "components": {
+    "panels": [
+      ".panel-navy",
+      ".panel-brand",
+      ".blueprint-light"
+    ],
+    "utilities": [
+      ".display-heavy",
+      ".eyebrow",
+      ".link-underline"
+    ],
+    "section_label": "Blue dot + uppercase eyebrow (Label component)"
+  },
+  "routes": [
+    "/",
+    "/about",
+    "/portfolio",
+    "/contact"
+  ],
+  "backend": "none \u2014 enquiry form opens a prefilled mailto: or WhatsApp message",
+  "pages": {
+    "Home": "hero, stats, about intro, marquee, all six services, development process, featured project, sectors, commitments, portfolio preview, testimonials, enquiry form",
+    "About Us": "split hero, story, service grid, vision & mission, turnkey model + four-stage detail, values, commitment panel",
+    "Portfolio": "filterable grid, case studies in a modal, capabilities, regional reach",
+    "Contact Us": "enquiry form, WhatsApp/phone CTAs, map, contact details"
+  },
+  "color_rules": [
+    "Amber is the primary accent: buttons, large numerals, icon plates, rules, dark-panel highlights.",
+    "Buttons on amber use ink (#141A24) text \u2014 amber with white text fails contrast.",
+    "Blue stays the link/small-text accent on white (6.3:1) and carries the full-bleed process and vision/mission panels.",
+    "Charcoal #1C2431 is both the heading colour and the dark surface, matching the logo's lettering."
+  ]
+}

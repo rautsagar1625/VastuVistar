@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 218 25% 12%;
+        --card: 0 0% 100%;
+        --card-foreground: 218 25% 12%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 218 25% 12%;
+        --primary: 38 91% 55%;
+        --primary-foreground: 218 25% 12%;
+        --secondary: 214 33% 96%;
+        --secondary-foreground: 218 25% 12%;
+        --muted: 214 33% 96%;
+        --muted-foreground: 217 24% 34%;
+        --accent: 38 91% 55%;
+        --accent-foreground: 218 25% 12%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 214 27% 87%;
+        --input: 214 27% 87%;
+        --ring: 38 91% 55%;
+        --radius: 4px;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        @apply bg-frost text-slate font-sans;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    ::selection {
+        background: #F5A623;
+        color: #141A24;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #F2F5FA;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #F5A623;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #D98910;
+    }
+}
+
+@layer components {
+    /* Deep navy panel with a faint blueprint grid — the signature dark surface */
+    .panel-navy {
+        background-color: #1C2431;
+        background-image:
+            linear-gradient(rgba(245, 166, 35, 0.10) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(245, 166, 35, 0.10) 1px, transparent 1px);
+        background-size: 46px 46px;
+    }
+    
+    /* Steel-blue gradient panel — the site's main blue surface */
+    .panel-brand {
+        background-color: #163D66;
+        background-image:
+            linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+            linear-gradient(115deg, #0F2742 0%, #1B4A7A 52%, #2E6BA8 100%);
+        background-size: 46px 46px, 46px 46px, auto;
+    }
+    /* Gradient used by the floating header pill */
+    .nav-gradient {
+        background-image: linear-gradient(100deg, rgba(15, 39, 66, 0.92) 0%, rgba(27, 74, 122, 0.88) 55%, rgba(46, 107, 168, 0.86) 100%);
+    }
+    .nav-gradient-solid {
+        background-image: linear-gradient(100deg, #0F2742 0%, #1B4A7A 55%, #2E6BA8 100%);
+    }
+    .panel-amber {
+        background-color: #F5A623;
+        background-image:
+            linear-gradient(rgba(20, 26, 36, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(20, 26, 36, 0.06) 1px, transparent 1px);
+        background-size: 46px 46px;
+    }
+    .blueprint-light {
+        background-color: #F1F4F8;
+        background-image:
+            linear-gradient(rgba(27, 74, 122, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(27, 74, 122, 0.08) 1px, transparent 1px);
+        background-size: 40px 40px;
+    }
+    .link-underline {
+        position: relative;
+    }
+    .link-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background: #F5A623;
+        transition: width 250ms ease;
+    }
+    .link-underline:hover::after {
+        width: 100%;
+    }
+    .eyebrow {
+        @apply font-sans font-semibold text-[11px] uppercase tracking-[0.18em];
+    }
+    /* Heavy lowercase display headings — the deck's signature type treatment */
+    .display-heavy {
+        @apply font-display font-extrabold tracking-[-0.03em];
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
