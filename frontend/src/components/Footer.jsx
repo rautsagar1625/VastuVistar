@@ -15,8 +15,8 @@ export default function Footer() {
 
   return (
     <>
-      <footer data-testid="site-footer" className="panel-navy text-white">
-        <div className="mx-auto max-w-[1320px] px-6 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr_1.3fr] gap-x-12 gap-y-10">
+      <footer data-testid="site-footer" className="panel-navy text-white border-t-4 border-amber">
+        <div className="mx-auto max-w-[1320px] px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1.2fr_1.3fr] gap-x-12 gap-y-10">
           <div>
             <Logo light height={48} />
             <p className="display-heavy text-lg text-white mt-5 leading-snug">

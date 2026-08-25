@@ -277,7 +277,7 @@ export default function Portfolio() {
       </section>
 
       {/* REACH — DARK */}
-      <section data-testid="geo-reach-section" className="panel-navy py-[100px] max-md:py-[60px]">
+      <section data-testid="geo-reach-section" className="panel-brand py-[84px] max-md:py-[56px]">
         <div className="mx-auto max-w-[1320px] px-6 grid lg:grid-cols-2 gap-14">
           <Reveal>
             <Label dark>Where We Build</Label>
@@ -297,10 +297,10 @@ export default function Portfolio() {
               Start your project <ArrowRight size={16} strokeWidth={2} />
             </Link>
           </Reveal>
-          <div className="grid sm:grid-cols-2 gap-px bg-white/10 self-center" data-testid="region-list">
+          <div className="grid sm:grid-cols-2 gap-px bg-white/15 self-center" data-testid="region-list">
             {REACH.map((r, i) => (
               <Reveal key={r.name} delay={i * 0.06}>
-                <div className="panel-navy p-6 flex items-baseline justify-between gap-3">
+                <div className="bg-brand-deep p-6 flex items-baseline justify-between gap-3">
                   <span className="text-white/85 text-sm">{r.name}</span>
                   <span className="display-heavy text-2xl text-amber">{r.count}</span>
                 </div>
