@@ -85,7 +85,7 @@ export default function About() {
         <div className="mx-auto max-w-[1320px] px-6 grid lg:grid-cols-2 gap-16 items-start">
           <Reveal>
             <Label>Our Story</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[42px] leading-[1.08] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[42px] leading-[1.08] mt-6">
               Concepts turned into structures that hold up.
             </h2>
             <div className="mt-7 space-y-5 text-[17px] leading-[1.75] text-slate">
@@ -136,7 +136,7 @@ export default function About() {
         <div className="mx-auto max-w-[1320px] px-6">
           <Reveal>
             <Label>What We Specialise In</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[42px] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[42px] mt-6">
               Six verticals, one team
             </h2>
           </Reveal>
@@ -200,7 +200,7 @@ export default function About() {
           <Reveal>
             <Label>The Turnkey Model</Label>
             <div className="grid lg:grid-cols-12 gap-8 items-end mt-6">
-              <h2 className="lg:col-span-6 display-heavy text-navy text-3xl md:text-[44px] leading-[1.06]">
+              <h2 className="lg:col-span-6 display-heavy text-ink text-3xl md:text-[44px] leading-[1.06]">
                 One partner from the first drawing to the last snag.
               </h2>
               <p className="lg:col-span-6 text-[17px] leading-[1.75] text-slate">
@@ -236,7 +236,7 @@ export default function About() {
             })}
           </div>
           <Reveal>
-            <p className="display-heavy text-navy/70 text-2xl md:text-3xl text-right mt-14">{COMPANY.promise}</p>
+            <p className="display-heavy text-ink/70 text-2xl md:text-3xl text-right mt-14">{COMPANY.promise}</p>
           </Reveal>
         </div>
       </section>
@@ -246,7 +246,7 @@ export default function About() {
         <div className="mx-auto max-w-[1320px] px-6">
           <Reveal>
             <Label>Core Values</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[42px] mt-6 max-w-2xl leading-[1.08]">
+            <h2 className="display-heavy text-ink text-3xl md:text-[42px] mt-6 max-w-2xl leading-[1.08]">
               What guides our actions and decisions
             </h2>
             <p className="mt-5 text-slate max-w-2xl leading-relaxed">
@@ -276,7 +276,7 @@ export default function About() {
           <div className="lg:col-span-4">
             <Reveal>
               <Label>Leadership</Label>
-              <h2 className="display-heavy text-navy text-[30px] md:text-[34px] leading-[1.12] mt-6 text-balance">
+              <h2 className="display-heavy text-ink text-[30px] md:text-[34px] leading-[1.12] mt-6 text-balance">
                 The people behind the firm
               </h2>
               <span className="block h-1 w-14 bg-amber mt-6" aria-hidden="true" />
@@ -308,8 +308,8 @@ export default function About() {
                     />
                   </div>
                   <figcaption className="px-6 py-6 border-t-[3px] border-amber">
-                    <h3 className="display-heavy text-navy text-[19px] leading-tight">{person.name}</h3>
-                    <p className="eyebrow text-amber-dark mt-2">{person.role}</p>
+                    <h3 className="display-heavy text-ink text-[19px] leading-tight">{person.name}</h3>
+                    <p className="eyebrow text-brand mt-2">{person.role}</p>
                     <p className="text-[14px] text-slate/85 mt-3.5 leading-[1.6]">{person.note}</p>
                   </figcaption>
                 </figure>
@@ -324,7 +324,7 @@ export default function About() {
         <div className="mx-auto max-w-[1320px] px-6 grid lg:grid-cols-2 gap-16 items-center">
           <Reveal>
             <Label>Why Clients Stay</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[40px] leading-[1.08] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[40px] leading-[1.08] mt-6">
               Advanced techniques. Quality materials. Skilled hands.
             </h2>
             <p className="mt-6 text-slate leading-[1.75] max-w-[54ch]">
@@ -350,7 +350,7 @@ export default function About() {
                 ["Transparency", "Billing you can reconcile"],
               ].map(([t, d]) => (
                 <div key={t} className="bg-white border-t-[3px] border-amber p-7 shadow-[0_4px_18px_rgba(20,26,36,0.07)]">
-                  <h3 className="display-heavy text-navy text-lg">{t}</h3>
+                  <h3 className="display-heavy text-ink text-lg">{t}</h3>
                   <p className="text-slate/80 text-sm mt-2 leading-relaxed">{d}</p>
                 </div>
               ))}

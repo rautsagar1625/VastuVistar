@@ -41,7 +41,7 @@ export default function Contact() {
           <div className="lg:col-span-3">
             <Reveal>
               <Label>Start a Conversation</Label>
-              <h2 className="display-heavy text-navy text-3xl md:text-[38px] mt-6 leading-[1.08]">
+              <h2 className="display-heavy text-ink text-3xl md:text-[38px] mt-6 leading-[1.08]">
                 Share your project requirements
               </h2>
               <p className="mt-4 text-slate">
@@ -123,7 +123,7 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="border-t border-mist pt-6">
-                  <p className="display-heavy text-xl text-navy leading-snug">
+                  <p className="display-heavy text-xl text-ink leading-snug">
                     Design, sanctioning, development and handover — all under one roof.
                   </p>
                 </div>

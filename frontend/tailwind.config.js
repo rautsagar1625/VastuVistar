@@ -13,8 +13,10 @@ module.exports = {
         sm: '2px'
       },
       fontFamily: {
-        display: ["'Archivo'", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
-        sans: ["Inter", "-apple-system", "sans-serif"]
+        /* Primary — headings, figures, navigation, buttons */
+        display: ["'IBM Plex Sans'", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
+        /* Secondary — body copy, labels, UI */
+        sans: ["Inter", "-apple-system", "Segoe UI", "Helvetica Neue", "Arial", "sans-serif"]
       },
       colors: {
         navy: '#1C2431',
@@ -31,8 +33,9 @@ module.exports = {
         frost: '#FFFFFF',
         cloud: '#F1F4F8',
         mist: '#D5DDE7',
-        slate: '#46536A',
-        ink: '#141A24',
+        slate: '#3E4A5C',
+        muted: '#5A6980',
+        ink: '#111C2E',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

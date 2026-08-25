@@ -66,12 +66,12 @@ export default function ServicesCarousel() {
       <div className="flex flex-wrap items-end justify-between gap-y-8 gap-x-12 mb-12">
         <div className="max-w-[620px]">
           <Label>What We Build</Label>
-          <h2 className="display-heavy text-navy text-[30px] md:text-[38px] leading-[1.1] mt-5">
+          <h2 className="display-heavy text-ink text-[30px] md:text-[38px] leading-[1.1] mt-5">
             A comprehensive range of<br className="hidden sm:block" /> civil development services
           </h2>
           <p className="text-[16px] leading-[1.75] text-slate/90 mt-5 max-w-[52ch]">
             Six verticals, one accountable team — the same firm
-            <span className="text-navy font-semibold"> designs it, sanctions it, builds it and
+            <span className="text-ink font-semibold"> designs it, sanctions it, builds it and
             hands it over.</span>
           </p>
         </div>
@@ -88,7 +88,7 @@ export default function ServicesCarousel() {
               aria-label="Previous services"
               data-testid="services-prev"
               onClick={() => embla && embla.scrollPrev()}
-              className="w-12 h-12 rounded-full border-2 border-mist text-navy flex items-center justify-center transition-colors duration-200 hover:border-amber hover:bg-amber hover:text-ink"
+              className="w-12 h-12 rounded-full border-2 border-mist text-ink flex items-center justify-center transition-colors duration-200 hover:border-amber hover:bg-amber hover:text-ink"
             >
               <ArrowLeft size={19} strokeWidth={2} />
             </button>
@@ -97,7 +97,7 @@ export default function ServicesCarousel() {
               aria-label="Next services"
               data-testid="services-next"
               onClick={() => embla && embla.scrollNext()}
-              className="w-12 h-12 rounded-full border-2 border-mist text-navy flex items-center justify-center transition-colors duration-200 hover:border-amber hover:bg-amber hover:text-ink"
+              className="w-12 h-12 rounded-full border-2 border-mist text-ink flex items-center justify-center transition-colors duration-200 hover:border-amber hover:bg-amber hover:text-ink"
             >
               <ArrowRight size={19} strokeWidth={2} />
             </button>
@@ -137,7 +137,7 @@ export default function ServicesCarousel() {
                   </div>
 
                   <div className="px-7 pt-7 pb-7 flex flex-col flex-1">
-                    <h3 className="display-heavy text-navy text-[20px] leading-[1.2] min-h-[48px]">{s.name}</h3>
+                    <h3 className="display-heavy text-ink text-[20px] leading-[1.2] min-h-[48px]">{s.name}</h3>
                     <p className="text-[15px] text-slate/90 mt-2.5 leading-[1.6]">{s.short}</p>
 
                     <ul className="mt-6 space-y-2.5 border-t border-mist pt-6">

@@ -22,7 +22,7 @@ export default function Marquee({ dark = false }) {
               <span key={`${half}-${i}`} className="flex items-center">
                 <span
                   className={`display-heavy text-2xl md:text-4xl px-8 whitespace-nowrap ${
-                    dark ? "text-white/15" : "text-navy/15"
+                    dark ? "text-white/15" : "text-ink/15"
                   }`}
                 >
                   {item}

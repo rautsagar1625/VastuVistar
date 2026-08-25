@@ -161,7 +161,7 @@ export default function Home() {
             <Link
               to="/portfolio"
               data-testid="hero-view-portfolio-btn"
-              className="inline-flex items-center justify-center h-[54px] px-8 rounded-full border border-white/50 text-white font-sans text-sm font-semibold tracking-wide transition-colors duration-200 hover:bg-white hover:text-navy"
+              className="inline-flex items-center justify-center h-[54px] px-8 rounded-full border border-white/50 text-white font-sans text-sm font-semibold tracking-wide transition-colors duration-200 hover:bg-white hover:text-ink"
             >
               View Portfolio
             </Link>
@@ -255,7 +255,7 @@ export default function Home() {
                 {/* Staircase offsets echo the rising circles in the company profile */}
                 <div data-testid={`process-step-${i + 1}`} className={`text-center ${STEP_OFFSET[i]}`}>
                   <div className="mx-auto w-[150px] h-[150px] rounded-full bg-white flex items-center justify-center shadow-[0_10px_30px_rgba(4,20,50,0.18)]">
-                    <span className="display-heavy text-navy text-lg px-4 leading-tight">{s.title}</span>
+                    <span className="display-heavy text-ink text-lg px-4 leading-tight">{s.title}</span>
                   </div>
                   <p className="text-sm text-white/80 leading-relaxed mt-6 max-w-[260px] mx-auto">
                     {s.description}
@@ -302,7 +302,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] px-6">
           <Reveal>
             <Label>Who We Build For</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[44px] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[44px] mt-6">
               Built for demanding sites
             </h2>
           </Reveal>
@@ -328,7 +328,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] px-6">
           <Reveal>
             <Label>What You Get</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[44px] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[44px] mt-6">
               The three commitments we hold to
             </h2>
           </Reveal>
@@ -351,7 +351,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] px-6">
           <Reveal>
             <Label>Selected Projects</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[44px] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[44px] mt-6">
               Structures already standing
             </h2>
           </Reveal>
@@ -383,7 +383,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] px-6">
           <Reveal>
             <Label>Our Clients</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[44px] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[44px] mt-6">
               Trusted by
             </h2>
             <p className="text-[15px] text-slate/80 mt-4 max-w-[560px] leading-relaxed">
@@ -450,7 +450,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1320px] px-6 grid lg:grid-cols-2 gap-16">
           <Reveal>
             <Label>Start a Project</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[46px] leading-[1.06] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[46px] leading-[1.06] mt-6">
               Tell us about your site.
             </h2>
             <p className="mt-6 text-[17px] leading-[1.75] text-slate max-w-md">

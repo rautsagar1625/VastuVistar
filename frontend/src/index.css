@@ -113,12 +113,14 @@
     .link-underline:hover::after {
         width: 100%;
     }
+    /* Small caps label, set in the secondary face */
     .eyebrow {
-        @apply font-sans font-semibold text-[11px] uppercase tracking-[0.18em];
+        @apply font-sans font-semibold text-[11.5px] uppercase tracking-[0.14em];
     }
-    /* Heavy lowercase display headings — the deck's signature type treatment */
+    /* Headings in the primary face. Bold, near-neutral tracking — the weight
+       does the work, not the letterfit. */
     .display-heavy {
-        @apply font-display font-extrabold tracking-[-0.03em];
+        @apply font-display font-bold tracking-[-0.011em];
     }
 }
 

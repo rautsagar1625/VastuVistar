@@ -83,7 +83,7 @@ function ProjectModal({ project, onClose }) {
           onClick={onClose}
           data-testid="project-modal-close"
           aria-label="Close"
-          className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 text-navy hover:bg-amber hover:text-ink transition-colors duration-200 flex items-center justify-center"
+          className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 text-ink hover:bg-amber hover:text-ink transition-colors duration-200 flex items-center justify-center"
         >
           <X size={20} strokeWidth={2} />
         </button>
@@ -92,7 +92,7 @@ function ProjectModal({ project, onClose }) {
 
         <div className="p-8 md:p-10">
           <span className="inline-block bg-brand text-white eyebrow px-3 py-1.5">{project.category}</span>
-          <h2 className="display-heavy text-navy text-3xl md:text-[38px] leading-[1.06] mt-4">{project.name}</h2>
+          <h2 className="display-heavy text-ink text-3xl md:text-[38px] leading-[1.06] mt-4">{project.name}</h2>
           <p className="text-slate mt-4 text-[16px] leading-relaxed">{project.tagline}</p>
 
           <div className="grid sm:grid-cols-3 gap-px bg-mist mt-8">
@@ -122,7 +122,7 @@ function ProjectModal({ project, onClose }) {
             <div key={title} className="mt-8">
               <div className="flex items-baseline gap-4">
                 <span className="display-heavy text-2xl text-amber">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="display-heavy text-navy text-lg">{title}</h3>
+                <h3 className="display-heavy text-ink text-lg">{title}</h3>
               </div>
               <p className="mt-3 text-[15px] leading-[1.75] text-slate sm:pl-[44px]">{body}</p>
             </div>
@@ -206,7 +206,7 @@ export default function Portfolio() {
         <div className="mx-auto max-w-[1320px] px-6">
           <Reveal>
             <Label>From Our Sites</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[42px] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[42px] mt-6">
               Sanaswadi &amp; Koregav
             </h2>
             <p className="text-[15px] text-slate/80 mt-4 max-w-[560px] leading-relaxed">
@@ -236,7 +236,7 @@ export default function Portfolio() {
                     />
                   </div>
                   <figcaption className="p-6">
-                    <span className="eyebrow text-amber-dark">{shot.location}</span>
+                    <span className="eyebrow text-brand">{shot.location}</span>
                     <p className="text-sm text-slate/80 mt-2 leading-relaxed">{shot.caption}</p>
                   </figcaption>
                 </figure>
@@ -251,7 +251,7 @@ export default function Portfolio() {
         <div className="mx-auto max-w-[1320px] px-6">
           <Reveal>
             <Label>Capabilities</Label>
-            <h2 className="display-heavy text-navy text-3xl md:text-[42px] mt-6">
+            <h2 className="display-heavy text-ink text-3xl md:text-[42px] mt-6">
               What we put up, week after week
             </h2>
           </Reveal>
