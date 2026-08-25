@@ -309,9 +309,9 @@ export const LEADERSHIP = [
   {
     name: "Mr. Ramdas Darekar",
     role: "Founder",
-    image: "/assets/founder-ramdas-darekar.jpg",
-    focus: "50% 10%",
-    zoom: 1.5,
+    image: "/assets/founder-ramdas-darekar.jpeg",
+    focus: "56% 50%",
+    zoom: 1,
     note: "Leads execution and site delivery across the firm's industrial and infrastructure work.",
   },
   {
