@@ -224,8 +224,8 @@ export const INDUSTRIES = [
  */
 export const SITE_GALLERY = [
   {
-    src: "/assets/Koregav.jpeg",
-    location: "Koregav",
+    src: "/assets/koregaon.jpeg",
+    location: "Koregaon",
     caption: "Open-front PEB warehouse with curved roof and RCC plinth",
     wide: true,
   },
@@ -323,7 +323,7 @@ export const LEADERSHIP = [
     image: "/assets/founder-ramdas-darekar.jpeg",
     focus: "56% 50%",
     zoom: 1,
-    note: "Leads execution and site delivery across the firm's industrial and infrastructure work.",
+    note: "Leads design coordination, statutory approvals and client relationships.",
   },
   {
     name: "Mr. Chaitanya Darekar",
@@ -331,7 +331,7 @@ export const LEADERSHIP = [
     image: "/assets/founder-chaitanya-darekar.jpg",
     focus: "50% 16%",
     zoom: 1,
-    note: "Leads design coordination, statutory approvals and client relationships.",
+    note: "Leads execution and site delivery across the firm's industrial and infrastructure work.",
   },
 ];
 
@@ -346,187 +346,42 @@ export const TESTIMONIALS = [
     quote:
       "The RCC work was documented properly — mix design, cube results, reinforcement checks. Our structural consultant signed off without a single observation.",
     name: "Sneha Kulkarni",
-    role: "Project Head · Commercial Development, Nashik",
+    role: "Project Head · Commercial Development, Shikrapur",
   },
   {
     quote:
       "Internal CC roads and drainage across the estate were completed during the monsoon window. Two years on, there is no settlement anywhere on the stretch.",
     name: "Amit Pawar",
-    role: "General Manager (Projects) · Industrial Estate, Chakan",
+    role: "General Manager (Projects) · Industrial Estate, Ranjangaon",
   },
 ];
 
 export const PROJECTS = [
   {
-    slug: "chakan-manufacturing-facility",
-    name: "Chakan Manufacturing Facility",
-    location: "Chakan, Pune",
+    slug: "sanaswadi-industrial-shed",
+    name: "Sanaswadi Industrial Shed",
+    location: "Sanaswadi, Pune",
     category: "Industrial",
-    year: "2024",
-    image: IMG.peb,
-    gallery: [IMG.factory, IMG.site, IMG.road],
-    services: ["PEB Buildings", "RCC Construction", "CC Road & Site Development"],
-    scope: ["Turnkey Delivery", "Fabrication & Erection"],
-    tagline:
-      "A 65,000 sq.ft clear-span PEB manufacturing unit with RCC foundations, internal roads and utilities.",
-    challenge:
-      "The client needed a production floor free of intermediate columns, sized for overhead crane movement, and commissioned in time for a fixed equipment-installation window handed down by their OEM.",
-    solution:
-      "We executed RCC foundations and pedestals ahead of steel delivery, fabricated the PEB frames in parallel, and erected the structure in phased bays so flooring could follow the erection crew instead of waiting for it.",
-    outcome:
-      "Handover three weeks ahead of the equipment window. The client has since appointed us for their adjacent warehouse block.",
-  },
-  {
-    slug: "ranjangaon-logistics-warehouse",
-    name: "Ranjangaon Logistics Warehouse",
-    location: "Ranjangaon, Pune",
-    category: "Industrial",
-    year: "2024",
-    image: IMG.factory,
-    gallery: [IMG.peb, IMG.site, IMG.rcc],
-    services: ["PEB Buildings", "Fabrication Services"],
+    year: "2025",
+    image: "/assets/sanaswadi4.jpeg",
+    gallery: ["/assets/sanaswadi.jpeg", "/assets/sanaswadi1.jpeg", "/assets/sanaswadi2.jpeg"],
+    services: ["PEB Buildings", "RCC Construction", "Fabrication Services"],
     scope: ["Design & Build"],
     tagline:
-      "A high-bay warehouse with mezzanine, dock levellers and heavy-duty hardstanding for container movement.",
-    challenge:
-      "Container traffic demanded a yard surface that would not rut under sustained axle loads, and a clear internal height tall enough for racking that had already been ordered.",
-    solution:
-      "The PEB frame was re-detailed for the racking heights, and the yard was built as reinforced CC hardstanding over an engineered sub-base designed for repeated trailer loading.",
-    outcome:
-      "Full racking installed without a single dimensional clash. The yard has carried two years of continuous container traffic without surface failure.",
+      "A clear-span pre-engineered shed with an attached RCC office block — portal frames, roof sheeting with translucent skylights and masonry infill walls, built and handed over at Sanaswadi.",
   },
   {
-    slug: "koregaon-park-commercial-block",
-    name: "Koregaon Park Commercial Block",
-    location: "Koregaon Park, Pune",
-    category: "Commercial",
-    year: "2024",
-    image: IMG.highrise,
-    gallery: [IMG.multistorey, IMG.concretePour, IMG.office2],
-    services: ["RCC Construction", "Residential & Commercial Buildings"],
-    scope: ["Turnkey Delivery"],
-    tagline:
-      "A seven-floor commercial building delivered from foundation to fit-out-ready shell and core.",
-    challenge:
-      "A tight urban plot with neighbouring structures on two sides left no room for open excavation or material stacking, while the leasing team needed floors released progressively.",
-    solution:
-      "We sequenced shoring and controlled excavation, ran a just-in-time material plan with night deliveries, and released completed floors for tenant fit-out while the upper floors were still in structure.",
-    outcome:
-      "Three floors leased before practical completion. Zero complaints registered by adjoining property owners through the build.",
-  },
-  {
-    slug: "talegaon-industrial-estate-roads",
-    name: "Talegaon Industrial Estate — Internal Roads",
-    location: "Talegaon, Pune",
-    category: "Infrastructure",
-    year: "2023",
-    image: IMG.siteTeam,
-    gallery: [IMG.aerialSite, IMG.civicBuilding, IMG.concretePour],
-    services: ["CC Road & Land Development"],
-    scope: ["Site Infrastructure"],
-    tagline:
-      "4.2 km of cement concrete roads with storm-water drainage across a working industrial estate.",
-    challenge:
-      "The estate could not be shut down. Roads had to be rebuilt in sections while tenant factories continued to receive and dispatch material every working day.",
-    solution:
-      "Work was split into short stretches with diversions agreed tenant by tenant, pouring one carriageway at a time and building the drainage network ahead of the pavement.",
-    outcome:
-      "The full network was completed without a single day of access loss for any tenant, and drains cleared their first monsoon without standing water.",
-  },
-  {
-    slug: "nashik-warehousing-park",
-    name: "Nashik Warehousing Park",
-    location: "Nashik, Maharashtra",
+    slug: "koregaon-peb-warehouse",
+    name: "Koregaon PEB Warehouse",
+    location: "Koregaon, Pune",
     category: "Industrial",
-    year: "2023",
-    image: IMG.aerialSite,
-    gallery: [IMG.peb, IMG.factory, IMG.siteTeam],
-    services: ["Turnkey Projects", "PEB Buildings", "CC Road & Land Development"],
-    scope: ["Turnkey Delivery"],
+    year: "2025",
+    image: "/assets/koregaon.jpeg",
+    gallery: ["/assets/koregaon.jpeg"],
+    services: ["PEB Buildings", "RCC Construction"],
+    scope: ["Design & Build"],
     tagline:
-      "Three warehouse blocks with shared internal roads, drainage and compound development.",
-    challenge:
-      "Three blocks, one site, one monsoon. Earthwork, foundations and steel erection all had to land inside a compressed dry-season window.",
-    solution:
-      "Earthwork and foundations for all three blocks ran concurrently under separate crews, with steel fabrication progressing off-site so erection could begin the day foundations cured.",
-    outcome:
-      "All three blocks were weather-tight before the monsoon broke, and internal development was completed during the rains under cover.",
-  },
-  {
-    slug: "baner-residential-tower",
-    name: "Baner Residential Tower",
-    location: "Baner, Pune",
-    category: "Residential",
-    year: "2024",
-    image: IMG.multistorey,
-    gallery: [IMG.highrise, IMG.interior2, IMG.whiteArch],
-    services: ["RCC Construction", "Residential & Commercial Buildings"],
-    scope: ["Structure & Finishing"],
-    tagline:
-      "An 11-floor residential tower — RCC structure, finishing and external development.",
-    challenge:
-      "Buyers were already booked against a committed possession date, leaving no float in the finishing programme across 88 apartments.",
-    solution:
-      "Finishing trades were run floor-by-floor immediately behind the structural cycle, with a fixed inspection checklist closed out per unit before the next trade was allowed in.",
-    outcome:
-      "Possession handed over on the committed date, with the snag list closed within three weeks of handover.",
-  },
-  {
-    slug: "chinchwad-fabrication-shed",
-    name: "Chinchwad Fabrication Shed",
-    location: "Chinchwad, Pune",
-    category: "Industrial",
-    year: "2023",
-    image: IMG.concretePour,
-    gallery: [IMG.factory, IMG.peb, IMG.steelStructure],
-    services: ["Fabrication Services", "PEB Buildings"],
-    scope: ["Fabrication & Erection"],
-    tagline:
-      "A crane-served fabrication shed with gantry girders, platforms and steel staircases.",
-    challenge:
-      "The shed had to carry a 10-tonne overhead crane, which meant gantry alignment tolerances far tighter than a standard shed and no room for field improvisation.",
-    solution:
-      "Gantry girders were fabricated and trial-assembled in the shop before dispatch, and erection was surveyed at every bay before the crane rail was fixed.",
-    outcome:
-      "The crane commissioned on first alignment check, with no post-erection correction required.",
-  },
-  {
-    slug: "hinjawadi-office-campus",
-    name: "Hinjawadi Office Campus",
-    location: "Hinjawadi, Pune",
-    category: "Commercial",
-    year: "2022",
-    image: IMG.highrise,
-    gallery: [IMG.office3, IMG.boardroom, IMG.multistorey],
-    services: ["Turnkey Projects", "RCC Construction"],
-    scope: ["Turnkey Delivery"],
-    tagline:
-      "A two-building office campus with landscaped external development and parking deck.",
-    challenge:
-      "Two buildings, one shared basement, and a client team that needed a fixed cost before board approval — with no appetite for variation claims later.",
-    solution:
-      "We froze the scope with the design team before mobilising, priced the package on measured quantities, and ran the build against that locked BOQ with weekly cost tracking.",
-    outcome:
-      "The campus closed within 2% of the sanctioned budget, and the client's board approved a second phase on the same commercial model.",
-  },
-  {
-    slug: "shirur-agro-processing-unit",
-    name: "Shirur Agro Processing Unit",
-    location: "Shirur, Pune",
-    category: "Industrial",
-    year: "2022",
-    image: IMG.civicBuilding,
-    gallery: [IMG.factory, IMG.rcc, IMG.road],
-    services: ["Turnkey Projects", "RCC Construction", "Fabrication Services"],
-    scope: ["Turnkey Delivery"],
-    tagline:
-      "A food-grade processing facility with washable finishes, effluent works and utility structures.",
-    challenge:
-      "Food-grade compliance dictated coving, slopes, drainage falls and surface finishes that had to be built right the first time — rework after commissioning would not be permitted.",
-    solution:
-      "We built a full mock-up bay for client and auditor sign-off before rolling the detail out across the plant, and held the same crew across all wet areas for consistency.",
-    outcome:
-      "The facility cleared its compliance audit on the first inspection, with no remedial civil work called for.",
+      "An open-front warehouse on a raised RCC plinth, with a curved PEB roof, full-height clear span for vehicle access and half-height masonry walls below the sheeting.",
   },
 ];
 

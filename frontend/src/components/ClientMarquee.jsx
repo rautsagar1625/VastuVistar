@@ -9,6 +9,12 @@ import { CLIENT_LOGOS, CLIENTS } from "@/data/content";
  * seamless. `animate-marquee-reverse` does the same journey backwards.
  * Hovering pauses both, and they hold still under reduced-motion.
  */
+/* Four copies, translated -50% — so the animation travels exactly two copies
+   and lands on an identical pair. Two copies rather than one because a single
+   pass of seven logos is narrower than a wide desktop, which left a visible
+   gap at the end of each cycle before the row wrapped around. */
+const COPIES = [0, 1, 2, 3];
+
 function Track({ children, reverse = false }) {
   return (
     <div
@@ -16,8 +22,8 @@ function Track({ children, reverse = false }) {
         reverse ? "animate-marquee-reverse" : "animate-marquee"
       } group-hover:[animation-play-state:paused] motion-reduce:animate-none`}
     >
-      {[0, 1].map((copy) => (
-        <div key={copy} className="flex shrink-0 items-center" aria-hidden={copy === 1}>
+      {COPIES.map((copy) => (
+        <div key={copy} className="flex shrink-0 items-center" aria-hidden={copy !== 0}>
           {children(copy)}
         </div>
       ))}

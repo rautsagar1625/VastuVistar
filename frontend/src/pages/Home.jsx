@@ -92,7 +92,7 @@ export default function Home() {
   }, []);
 
   const featured = PROJECTS[0];
-  const preview = [PROJECTS[2], PROJECTS[3], PROJECTS[5]];
+  const preview = PROJECTS.slice(0, 3);
 
   return (
     <main data-testid="home-page">
@@ -356,15 +356,11 @@ export default function Home() {
             </h2>
           </Reveal>
           <div className="grid md:grid-cols-2 gap-6 mt-14">
-            <Reveal className="md:row-span-2">
-              <ProjectPreviewCard project={preview[0]} tall />
-            </Reveal>
-            <Reveal delay={0.1}>
-              <ProjectPreviewCard project={preview[1]} />
-            </Reveal>
-            <Reveal delay={0.2}>
-              <ProjectPreviewCard project={preview[2]} />
-            </Reveal>
+            {preview.map((project, i) => (
+              <Reveal key={project.slug} delay={i * 0.1}>
+                <ProjectPreviewCard project={project} />
+              </Reveal>
+            ))}
           </div>
           <Reveal className="text-center mt-14">
             <Link

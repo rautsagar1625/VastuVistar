@@ -45,7 +45,7 @@ export default function Navbar() {
         >
           <div className="mx-auto max-w-[1320px] h-full px-6 flex items-center gap-6">
             {/* badge occupies this slot; spacer keeps the row aligned */}
-            <div className={`shrink-0 transition-[width] duration-300 ${scrolled ? "w-[168px]" : "w-[196px]"}`} />
+            <div className={`shrink-0 transition-[width] duration-300 ${scrolled ? "w-[190px]" : "w-[224px]"}`} />
 
             <nav className="hidden lg:flex items-center gap-10 mx-auto" aria-label="Primary">
               {LINKS.map((l) => (
@@ -70,14 +70,24 @@ export default function Navbar() {
             </nav>
 
             <div className="hidden lg:flex items-center gap-5 shrink-0 ml-auto">
-              <a
-                href={CONTACT.phoneHref}
-                data-testid="nav-phone"
-                className="inline-flex items-center gap-2 text-[14.5px] font-semibold text-white/85 hover:text-white transition-colors duration-200"
-              >
-                <Phone size={17} strokeWidth={2} />
-                {CONTACT.phone}
-              </a>
+              <div className="flex items-center gap-2 text-[14.5px] font-semibold text-white/85">
+                <Phone size={17} strokeWidth={2} className="shrink-0" />
+                <a
+                  href={CONTACT.phoneHref}
+                  data-testid="nav-phone"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  {CONTACT.phone}
+                </a>
+                <span className="text-white/35" aria-hidden="true">/</span>
+                <a
+                  href={CONTACT.phoneAltHref}
+                  data-testid="nav-phone-alt"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  {CONTACT.phoneAlt}
+                </a>
+              </div>
               <Link
                 to="/contact"
                 data-testid="get-quote-btn"
@@ -107,9 +117,9 @@ export default function Navbar() {
               data-testid="nav-logo"
               className={`pointer-events-auto relative block bg-white shadow-[0_14px_34px_rgba(10,20,35,0.30)]
                 flex items-center justify-center transition-[width,height] duration-300
-                ${scrolled ? "w-[160px] h-[86px] lg:w-[168px] lg:h-[92px]" : "w-[176px] h-[104px] lg:w-[196px] lg:h-[116px]"}`}
+                ${scrolled ? "w-[176px] h-[94px] lg:w-[190px] lg:h-[100px]" : "w-[196px] h-[116px] lg:w-[224px] lg:h-[130px]"}`}
             >
-              <Logo height={scrolled ? 54 : 70} className="px-2" />
+              <Logo height={scrolled ? 62 : 84} className="px-2" />
               <span className="absolute left-0 right-0 bottom-0 h-[5px] bg-amber" aria-hidden="true" />
             </Link>
           </div>
@@ -128,7 +138,7 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between px-6 h-[78px]">
               <span className="bg-white px-3 py-2 shadow-[0_10px_24px_rgba(10,20,35,0.28)] relative">
-                <Logo height={48} />
+                <Logo height={56} />
                 <span className="absolute left-0 right-0 bottom-0 h-[4px] bg-amber" aria-hidden="true" />
               </span>
               <button
@@ -172,6 +182,7 @@ export default function Navbar() {
                   Get a Quote <ArrowRight size={16} strokeWidth={2.5} />
                 </Link>
                 <a href={CONTACT.phoneHref} className="text-white/75 text-sm">{CONTACT.phone}</a>
+                <a href={CONTACT.phoneAltHref} className="text-white/75 text-sm">{CONTACT.phoneAlt}</a>
               </motion.div>
             </nav>
           </motion.div>

@@ -9,13 +9,15 @@ import { IMG, PROJECTS, NOTABLE_CAPABILITIES, SITE_GALLERY } from "@/data/conten
 
 const FILTERS = ["All", "Industrial", "Commercial", "Residential", "Infrastructure"];
 
+/* The corridor the firm actually operates in. Deliberately no per-area
+   counts — the project total lives in STATS and is not split by area. */
 const REACH = [
-  { name: "Pune & PCMC", count: 46 },
-  { name: "Chakan & Talegaon", count: 24 },
-  { name: "Ranjangaon & Shirur", count: 18 },
-  { name: "Nashik", count: 14 },
-  { name: "Ahmednagar", count: 11 },
-  { name: "Rest of Maharashtra", count: 9 },
+  { name: "Sanaswadi" },
+  { name: "Ranjangaon" },
+  { name: "Koregaon" },
+  { name: "Wadegaon" },
+  { name: "Shikrapur" },
+  { name: "Talegaon" },
 ];
 
 function ProjectCard({ project, onOpen, tall = false }) {
@@ -118,7 +120,9 @@ function ProjectModal({ project, onClose }) {
             ["The Challenge", project.challenge],
             ["Our Solution", project.solution],
             ["The Outcome", project.outcome],
-          ].map(([title, body], i) => (
+          ]
+            .filter(([, body]) => body)
+            .map(([title, body], i) => (
             <div key={title} className="mt-8">
               <div className="flex items-baseline gap-4">
                 <span className="display-heavy text-2xl text-amber">{String(i + 1).padStart(2, "0")}</span>
@@ -126,7 +130,7 @@ function ProjectModal({ project, onClose }) {
               </div>
               <p className="mt-3 text-[15px] leading-[1.75] text-slate sm:pl-[44px]">{body}</p>
             </div>
-          ))}
+            ))}
 
           <div className="grid grid-cols-3 gap-3 mt-10">
             {project.gallery.map((g, i) => (
@@ -207,7 +211,7 @@ export default function Portfolio() {
           <Reveal>
             <Label>From Our Sites</Label>
             <h2 className="display-heavy text-ink text-3xl md:text-[42px] mt-6">
-              Sanaswadi &amp; Koregav
+              Sanaswadi &amp; Koregaon
             </h2>
             <p className="text-[15px] text-slate/80 mt-4 max-w-[560px] leading-relaxed">
               Photographs taken on our own sites — steel up, sheeting on, and the finished
@@ -285,9 +289,9 @@ export default function Portfolio() {
               Across Maharashtra's industrial belt
             </h2>
             <p className="mt-6 text-white/70 leading-[1.75] max-w-lg">
-              Our work is concentrated around Pune's manufacturing corridor and the industrial
-              estates that feed it — with residential and commercial builds through the wider
-              region. Sites are supervised by our own engineers, not handed to third parties.
+              We work across the industrial belt east of Pune — on the estates around
+              Sanaswadi, Ranjangaon, Koregaon, Wadegaon, Shikrapur and Talegaon. Sites are
+              supervised by our own engineers, not handed to third parties.
             </p>
             <Link
               to="/contact"
@@ -300,9 +304,9 @@ export default function Portfolio() {
           <div className="grid sm:grid-cols-2 gap-px bg-white/15 self-center" data-testid="region-list">
             {REACH.map((r, i) => (
               <Reveal key={r.name} delay={i * 0.06}>
-                <div className="bg-brand-deep p-6 flex items-baseline justify-between gap-3">
-                  <span className="text-white/85 text-sm">{r.name}</span>
-                  <span className="display-heavy text-2xl text-amber">{r.count}</span>
+                <div className="bg-brand-deep p-6 flex items-center gap-3">
+                  <MapPin size={16} strokeWidth={2} className="text-amber shrink-0" />
+                  <span className="display-heavy text-white text-[15px]">{r.name}</span>
                 </div>
               </Reveal>
             ))}

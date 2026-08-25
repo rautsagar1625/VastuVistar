@@ -81,7 +81,7 @@ export default function Contact() {
               <div className="overflow-hidden border border-mist" data-testid="contact-map">
                 <iframe
                   title="Vastu Vistar office location"
-                  src="https://maps.google.com/maps?q=Ghawane%20Complex%2C%20Sanaswadi%2C%20Pune%20412208&z=15&output=embed"
+                  src="https://maps.google.com/maps?q=18.6647298,74.0942504&z=17&output=embed"
                   className="w-full h-[300px]"
                   loading="lazy"
                 />
