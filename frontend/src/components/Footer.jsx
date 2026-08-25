@@ -29,7 +29,7 @@ export default function Footer() {
               <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" data-testid="footer-linkedin" aria-label="LinkedIn" className="text-white/60 hover:text-amber transition-colors duration-200">
                 <Linkedin size={20} strokeWidth={1.5} />
               </a>
-              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" data-testid="footer-instagram" aria-label="Instagram" className="text-white/60 hover:text-amber transition-colors duration-200">
+              <a href={CONTACT.instagram} target="_blank" rel="noopener noreferrer" data-testid="footer-instagram" aria-label="Instagram" className="text-white/60 hover:text-amber transition-colors duration-200">
                 <Instagram size={20} strokeWidth={1.5} />
               </a>
             </div>

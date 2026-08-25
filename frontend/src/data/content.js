@@ -12,16 +12,17 @@ export const COMPANY = {
 };
 
 export const CONTACT = {
-  /* Primary enquiry line. */
-  phone: "+91 97666 78282",
-  phoneHref: "tel:+919766678282",
-  phoneAlt: "+91 96379 67171",
-  phoneAltHref: "tel:+919637967171",
+  /* Listed first everywhere. */
+  phone: "+91 96379 67171",
+  phoneHref: "tel:+919637967171",
+  phoneAlt: "+91 97666 78282",
+  phoneAltHref: "tel:+919766678282",
   whatsapp: "https://wa.me/919766678282",
   email: "Vastuvistarinfra@gmail.com",
   careersEmail: "Vastuvistarinfra@gmail.com",
   address: "Near Kotak Bank, Ghawane Complex, Sanaswadi, Pune 412208",
   hours: "Monday – Saturday · 9:30 – 18:30 IST",
+  instagram: "https://www.instagram.com/vastu_vistar_infra",
 };
 
 export const IMG = {
@@ -241,11 +242,6 @@ export const SITE_GALLERY = [
     caption: "Clear-span portal frames and roof sheeting",
   },
   {
-    src: "/assets/sanaswadi1.jpeg",
-    location: "Sanaswadi",
-    caption: "Structure erected, masonry infill walls underway",
-  },
-  {
     src: "/assets/sanaswadi2.jpeg",
     location: "Sanaswadi",
     caption: "Roof trusses with translucent skylight panels",
@@ -395,7 +391,6 @@ export const PROJECTS = [
       "/assets/sanaswadi10.jpeg",
       "/assets/sanaswadi11.jpeg",
       "/assets/sanaswadi.jpeg",
-      "/assets/sanaswadi1.jpeg",
       "/assets/sanaswadi2.jpeg",
     ],
     services: ["PEB Buildings", "RCC Construction", "Fabrication Services"],
@@ -408,7 +403,7 @@ export const PROJECTS = [
     name: "Koregaon PEB Warehouse",
     location: "Koregaon, Pune",
     category: "Industrial",
-    year: "2025",
+    year: "In progress",
     image: "/assets/koregaon.jpeg",
     gallery: ["/assets/koregaon.jpeg"],
     services: ["PEB Buildings", "RCC Construction"],
@@ -434,6 +429,6 @@ export const PROJECTS = [
 export const STATS = [
   { value: 18, suffix: "+", label: "Projects Delivered" },
   { value: 6, suffix: "", label: "Service Verticals" },
-  { value: 7.5, decimals: 1, suffix: "L+", label: "Sq.Ft Built-up" },
+  { value: 4.5, decimals: 1, suffix: "L+", label: "Sq.Ft Built-up" },
   { value: 100, suffix: "%", label: "Completion Rate" },
 ];
