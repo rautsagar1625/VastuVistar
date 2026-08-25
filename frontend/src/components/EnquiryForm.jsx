@@ -47,17 +47,43 @@ function composeMessage(data) {
 export default function EnquiryForm({ variant = "home" }) {
   const full = variant === "full";
   const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
 
   const readForm = (form) => Object.fromEntries(new FormData(form).entries());
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    const data = readForm(e.target);
+  /** Last resort if the server send fails: hand the enquiry to the visitor's
+   *  own mail client, as the form used to do for everyone. */
+  const openMailClient = (data) => {
     const subject = `Project enquiry — ${data.service || "Vastu Vistar"}${data.name ? ` — ${data.name}` : ""}`;
-    setSending(true);
     window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(composeMessage(data))}`;
-    toast.success("Opening your email app with the enquiry ready to send.");
-    setTimeout(() => setSending(false), 1200);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = readForm(form);
+    setSending(true);
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      const body = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(body.error || "Send failed");
+      setSent(true);
+      form.reset();
+      toast.success("Enquiry sent. We'll come back to you within 24 hours.");
+    } catch (err) {
+      toast.error(
+        err.message && err.message !== "Send failed"
+          ? err.message
+          : "We could not send that. Opening your email app instead.",
+      );
+      openMailClient(data);
+    } finally {
+      setSending(false);
+    }
   };
 
   const onWhatsApp = (e) => {
@@ -73,6 +99,13 @@ export default function EnquiryForm({ variant = "home" }) {
 
   return (
     <form data-testid="enquiry-form" onSubmit={onSubmit} className="space-y-7">
+      {/* Bot trap — off-screen and skipped by keyboard and screen readers. */}
+      <div className="absolute left-[-9999px]" aria-hidden="true">
+        <label>
+          Do not fill this in
+          <input type="text" name="website" tabIndex={-1} autoComplete="off" />
+        </label>
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-7">
         <Field label="Full Name *">
           <input required name="name" data-testid="enquiry-name" className={inputCls} placeholder="Your name" />
@@ -88,7 +121,8 @@ export default function EnquiryForm({ variant = "home" }) {
         </Field>
         {full && (
           <Field label="Project Type">
-            <select name="region" data-testid="enquiry-region" className={inputCls}>
+            <select name="region" data-testid="enquiry-region" className={inputCls} defaultValue="">
+              <option value="">Select…</option>
               {PROJECT_TYPES.map((r) => (
                 <option key={r}>{r}</option>
               ))}
@@ -96,7 +130,8 @@ export default function EnquiryForm({ variant = "home" }) {
           </Field>
         )}
         <Field label="Service Interest">
-          <select name="service" data-testid="enquiry-service" className={inputCls}>
+          <select name="service" data-testid="enquiry-service" className={inputCls} defaultValue="">
+            <option value="">Select…</option>
             {(full ? SERVICES_FULL : SERVICES_HOME).map((s) => (
               <option key={s}>{s}</option>
             ))}
@@ -127,7 +162,7 @@ export default function EnquiryForm({ variant = "home" }) {
           className="flex-1 h-[52px] rounded-full bg-amber text-ink font-sans text-sm font-semibold tracking-wide transition-[background-color,transform] duration-200 hover:bg-amber-dark hover:-translate-y-px disabled:opacity-60 flex items-center justify-center gap-2"
         >
           <Mail size={16} strokeWidth={2} />
-          Send by Email
+          {sending ? "Sending…" : sent ? "Sent" : "Send Enquiry"}
         </button>
         <button
           type="button"
@@ -140,8 +175,9 @@ export default function EnquiryForm({ variant = "home" }) {
         </button>
       </div>
       <p className="text-xs text-slate/60 leading-relaxed">
-        Both options open with your enquiry already written out — review it and hit send. Have
-        drawings or a BOQ? Attach them to the email and we'll take it from there.
+        Send the enquiry and it reaches our inbox directly — we reply within 24 hours. Prefer
+        WhatsApp? That button opens a chat with your details already written out. Have drawings
+        or a BOQ? Reply to our email with them attached.
       </p>
     </form>
   );
