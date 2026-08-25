@@ -88,7 +88,7 @@ it is never in the frontend bundle, where anyone could read it.
 
 ### One-time setup
 
-1. Sign up to Resend **with the company address** (`Vastuvistarinfra@gmail.com`).
+1. Sign up to Resend **with the company address** (`vastuvistarinfra@gmail.com`).
    Until a company domain is verified, Resend only permits sending *from*
    `onboarding@resend.dev` and *to* the account's own address — which is exactly
    what this form does.
@@ -99,7 +99,7 @@ it is never in the frontend bundle, where anyone could read it.
 | Variable | Required | Default |
 | --- | --- | --- |
 | `RESEND_API_KEY` | yes | — |
-| `ENQUIRY_TO` | no | `Vastuvistarinfra@gmail.com` |
+| `ENQUIRY_TO` | no | `vastuvistarinfra@gmail.com` |
 | `ENQUIRY_FROM` | no | `Vastu Vistar Website <onboarding@resend.dev>` |
 
 ### When a company domain is verified

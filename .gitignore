@@ -13,9 +13,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Local env files
+# Local env files — never commit secrets.
+# frontend/.env is tracked on purpose: it holds only CRA dev-server settings.
+.env
 .env.local
 .env.*.local
+!frontend/.env
 
 # Editor / OS
 .DS_Store

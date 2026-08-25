@@ -12,7 +12,10 @@
  */
 
 const FROM = process.env.ENQUIRY_FROM || "Vastu Vistar Website <onboarding@resend.dev>";
-const TO = process.env.ENQUIRY_TO || "Vastuvistarinfra@gmail.com";
+/* Lowercased: while the account has no verified domain, Resend matches the
+   permitted test recipient case-sensitively and rejects "Vastuvistarinfra@..."
+   with a 403 naming the lowercase address. */
+const TO = (process.env.ENQUIRY_TO || "vastuvistarinfra@gmail.com").trim().toLowerCase();
 
 /* Best-effort throttle. Serverless instances come and go, so this stops a
    burst from one address rather than a determined attacker; the honeypot and
