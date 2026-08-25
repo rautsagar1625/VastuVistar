@@ -5,7 +5,7 @@ import { ArrowRight, X, MapPin, CalendarDays, Layers } from "lucide-react";
 import Label from "@/components/Label";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
-import { IMG, PROJECTS, NOTABLE_CAPABILITIES } from "@/data/content";
+import { IMG, PROJECTS, NOTABLE_CAPABILITIES, SITE_GALLERY } from "@/data/content";
 
 const FILTERS = ["All", "Industrial", "Commercial", "Residential", "Infrastructure"];
 
@@ -198,6 +198,51 @@ export default function Portfolio() {
           {shown.length === 0 && (
             <p className="text-center text-slate/60 py-16" data-testid="no-projects">No projects in this category yet.</p>
           )}
+        </div>
+      </section>
+
+      {/* FROM OUR SITES */}
+      <section data-testid="site-gallery-section" className="py-[90px] max-md:py-[60px]">
+        <div className="mx-auto max-w-[1320px] px-6">
+          <Reveal>
+            <Label>From Our Sites</Label>
+            <h2 className="display-heavy text-navy text-3xl md:text-[42px] mt-6">
+              Sanaswadi &amp; Koregav
+            </h2>
+            <p className="text-[15px] text-slate/80 mt-4 max-w-[560px] leading-relaxed">
+              Photographs taken on our own sites — steel up, sheeting on, and the finished
+              buildings handed over.
+            </p>
+          </Reveal>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            {SITE_GALLERY.map((shot, i) => (
+              <Reveal
+                key={shot.src}
+                delay={(i % 3) * 0.08}
+                className={shot.wide ? "lg:col-span-2" : ""}
+              >
+                <figure
+                  data-testid={`site-shot-${shot.src.split("/").pop().split(".")[0].toLowerCase()}`}
+                  className="group bg-white shadow-[0_4px_20px_rgba(6,27,58,0.08)] h-full"
+                >
+                  <div className="overflow-hidden">
+                    <img
+                      src={shot.src}
+                      alt={`${shot.caption} — ${shot.location}`}
+                      loading="lazy"
+                      className={`w-full object-cover transition-transform duration-500 group-hover:scale-[1.04] ${
+                        shot.wide ? "aspect-[2/1]" : "aspect-[4/3]"
+                      }`}
+                    />
+                  </div>
+                  <figcaption className="p-6">
+                    <span className="eyebrow text-amber-dark">{shot.location}</span>
+                    <p className="text-sm text-slate/80 mt-2 leading-relaxed">{shot.caption}</p>
+                  </figcaption>
+                </figure>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

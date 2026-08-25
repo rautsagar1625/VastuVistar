@@ -217,6 +217,39 @@ export const INDUSTRIES = [
   },
 ];
 
+/**
+ * Photographs from our own sites, grouped by location.
+ * Captions describe only what the photograph shows.
+ */
+export const SITE_GALLERY = [
+  {
+    src: "/assets/Koregav.jpeg",
+    location: "Koregav",
+    caption: "Open-front PEB warehouse with curved roof and RCC plinth",
+    wide: true,
+  },
+  {
+    src: "/assets/sanaswadi4.jpeg",
+    location: "Sanaswadi",
+    caption: "Completed industrial shed with attached office block",
+  },
+  {
+    src: "/assets/sanaswadi.jpeg",
+    location: "Sanaswadi",
+    caption: "Clear-span portal frames and roof sheeting",
+  },
+  {
+    src: "/assets/sanaswadi1.jpeg",
+    location: "Sanaswadi",
+    caption: "Structure erected, masonry infill walls underway",
+  },
+  {
+    src: "/assets/sanaswadi2.jpeg",
+    location: "Sanaswadi",
+    caption: "Roof trusses with translucent skylight panels",
+  },
+];
+
 export const CLIENTS = [
   "Ram Engineering",
   "Bindras Kitchen",
