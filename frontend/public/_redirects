@@ -1,1 +1,6 @@
+# Rules here take precedence over netlify.toml, and are matched top to bottom.
+# The enquiry function must be listed before the SPA catch-all, or the
+# catch-all serves index.html for it and the form silently posts into a page.
+/api/enquiry    /.netlify/functions/enquiry    200
+
 /*    /index.html   200

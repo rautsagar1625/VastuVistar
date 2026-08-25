@@ -69,8 +69,10 @@ export default function EnquiryForm({ variant = "home" }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
+      /* Insist on the function's own JSON acknowledgement. A misrouted POST
+         can still answer 200 with an HTML page, which must not read as sent. */
       const body = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(body.error || "Send failed");
+      if (!res.ok || body.ok !== true) throw new Error(body.error || "Send failed");
       setSent(true);
       form.reset();
       toast.success("Enquiry sent. We'll come back to you within 24 hours.");
