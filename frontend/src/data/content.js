@@ -251,6 +251,17 @@ export const SITE_GALLERY = [
   },
 ];
 
+/** Client logos, for the scrolling strip. Files live in public/assets/clients. */
+export const CLIENT_LOGOS = [
+  { name: "Victora Auto", src: "/assets/clients/victora-auto.png" },
+  { name: "Asiatec Coatings", src: "/assets/clients/asiatec-coatings.png" },
+  { name: "Lalwani Group", src: "/assets/clients/lalwani-group.png" },
+  { name: "UGC Supply Chain Solutions", src: "/assets/clients/ugc-supply-chain.png" },
+  { name: "Kunj Glass", src: "/assets/clients/kunj-glass.png" },
+  { name: "Delta Estates", src: "/assets/clients/delta-estates.png" },
+  { name: "SVA Corporation", src: "/assets/clients/sva-corporation.png" },
+];
+
 export const CLIENTS = [
   "Ram Engineering",
   "Bindras Kitchen",

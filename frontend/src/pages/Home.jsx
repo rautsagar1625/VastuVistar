@@ -8,6 +8,7 @@ import {
 import Label from "@/components/Label";
 import Reveal from "@/components/Reveal";
 import Marquee from "@/components/Marquee";
+import ClientMarquee from "@/components/ClientMarquee";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import EnquiryForm from "@/components/EnquiryForm";
 import {
@@ -390,6 +391,13 @@ export default function Home() {
               taken back a finished building.
             </p>
           </Reveal>
+        </div>
+
+        <div className="mt-12">
+          <ClientMarquee />
+        </div>
+
+        <div className="mx-auto max-w-[1320px] px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mt-14">
             {CLIENTS.map((client, i) => (
               <Reveal key={client} delay={i * 0.04} className="h-full">
