@@ -26,6 +26,7 @@ export const CONTACT = {
 
 export const IMG = {
   heroHome: "/assets/aerial-site.jpg",
+  ccRoad: "/assets/cc-road.jpeg",
   peb: u("1496247749665-49cf5b1022e9"),
   steelStructure: "/assets/steel-structure.jpg",
   siteTeam: "/assets/site-team.jpg",
@@ -117,8 +118,8 @@ export const SERVICES = [
     id: "cc-road-land-development",
     name: "CC Road & Land Development",
     icon: "Route",
-    image: IMG.siteTeam,
-    cardBg: IMG.siteTeam,
+    image: IMG.ccRoad,
+    cardBg: IMG.ccRoad,
     short: "Site infrastructure that carries real industrial loads.",
     description:
       "Cement concrete roads, internal pavements, hardstanding, drainage and complete land development for industrial estates and townships — from levelling and compaction through to storm-water networks, culverts, kerbs and boundary works.",
@@ -249,6 +250,31 @@ export const SITE_GALLERY = [
     location: "Sanaswadi",
     caption: "Roof trusses with translucent skylight panels",
   },
+  {
+    src: "/assets/sanaswadi8.jpeg",
+    location: "Sanaswadi",
+    caption: "Finished shed with roller shutter and stone-faced plinth",
+  },
+  {
+    src: "/assets/sanaswadi10.jpeg",
+    location: "Sanaswadi",
+    caption: "Clad shed with compound wall and gate complete",
+  },
+  {
+    src: "/assets/sanaswadi11.jpeg",
+    location: "Sanaswadi",
+    caption: "Unit in use, with masonry walls up to sill and sheeting above",
+  },
+  {
+    src: "/assets/talegaon.jpeg",
+    location: "Talegaon",
+    caption: "RCC slab reinforcement tied and shuttered, ready for pour",
+  },
+  {
+    src: "/assets/cc-road.jpeg",
+    location: "Sanaswadi",
+    caption: "Internal CC road with kerbs and side drainage",
+  },
 ];
 
 /** Client logos, for the scrolling strip. Files live in public/assets/clients. */
@@ -364,7 +390,14 @@ export const PROJECTS = [
     category: "Industrial",
     year: "2025",
     image: "/assets/sanaswadi4.jpeg",
-    gallery: ["/assets/sanaswadi.jpeg", "/assets/sanaswadi1.jpeg", "/assets/sanaswadi2.jpeg"],
+    gallery: [
+      "/assets/sanaswadi8.jpeg",
+      "/assets/sanaswadi10.jpeg",
+      "/assets/sanaswadi11.jpeg",
+      "/assets/sanaswadi.jpeg",
+      "/assets/sanaswadi1.jpeg",
+      "/assets/sanaswadi2.jpeg",
+    ],
     services: ["PEB Buildings", "RCC Construction", "Fabrication Services"],
     scope: ["Design & Build"],
     tagline:
@@ -382,6 +415,19 @@ export const PROJECTS = [
     scope: ["Design & Build"],
     tagline:
       "An open-front warehouse on a raised RCC plinth, with a curved PEB roof, full-height clear span for vehicle access and half-height masonry walls below the sheeting.",
+  },
+  {
+    slug: "talegaon-rcc-structure",
+    name: "Talegaon RCC Structure",
+    location: "Talegaon, Pune",
+    category: "Commercial",
+    year: "In progress",
+    image: "/assets/talegaon.jpeg",
+    gallery: ["/assets/talegaon.jpeg"],
+    services: ["RCC Construction"],
+    scope: ["Civil Execution"],
+    tagline:
+      "A reinforced concrete framed structure under construction at Talegaon — slab reinforcement tied and shuttered across the floor plate, ready for pour.",
   },
 ];
 
