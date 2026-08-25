@@ -87,6 +87,10 @@ module.exports = {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-50%)' }
         },
+        'marquee-reverse': {
+          from: { transform: 'translateX(-50%)' },
+          to: { transform: 'translateX(0)' }
+        },
         'pulse-ring': {
           '0%': { transform: 'scale(1)', opacity: '0.6' },
           '100%': { transform: 'scale(1.9)', opacity: '0' }
@@ -101,6 +105,7 @@ module.exports = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         marquee: 'marquee 40s linear infinite',
+        'marquee-reverse': 'marquee-reverse 45s linear infinite',
         'pulse-ring': 'pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'scroll-dot': 'scroll-dot 1.8s ease-in-out infinite'
       }

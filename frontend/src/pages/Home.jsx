@@ -12,7 +12,7 @@ import ClientMarquee from "@/components/ClientMarquee";
 import ServicesCarousel from "@/components/ServicesCarousel";
 import EnquiryForm from "@/components/EnquiryForm";
 import {
-  IMG, INDUSTRIES, CLIENTS, TESTIMONIALS, PROJECTS, PROCESS_STEPS, STATS, COMPANY,
+  IMG, INDUSTRIES, TESTIMONIALS, PROJECTS, PROCESS_STEPS, STATS, COMPANY,
 } from "@/data/content";
 
 const ICONS = { Factory, Building2, Home: HomeIcon, Landmark };
@@ -397,22 +397,6 @@ export default function Home() {
           <ClientMarquee />
         </div>
 
-        <div className="mx-auto max-w-[1320px] px-6">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-10 mt-14">
-            {CLIENTS.map((client, i) => (
-              <Reveal key={client} delay={i * 0.04} className="h-full">
-                <div
-                  data-testid={`client-${client.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`}
-                  className="h-full border-t-2 border-amber pt-5"
-                >
-                  <h3 className="display-heavy text-ink text-base md:text-lg leading-snug">
-                    {client}
-                  </h3>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* TESTIMONIALS */}
