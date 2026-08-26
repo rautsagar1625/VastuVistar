@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Linkedin, Instagram, Phone, Mail, MapPin, ArrowUp, MessageCircle } from "lucide-react";
+import { Linkedin, Instagram, Phone, Mail, MapPin, ArrowUp, MessageCircle, Heart } from "lucide-react";
 import Logo from "@/components/Logo";
 import { CONTACT, COMPANY, SERVICES } from "@/data/content";
 
@@ -97,6 +97,34 @@ export default function Footer() {
               <Link to="/contact" data-testid="footer-privacy" className="hover:text-amber transition-colors duration-200">Privacy Policy</Link>
               <Link to="/contact" data-testid="footer-terms" className="hover:text-amber transition-colors duration-200">Terms</Link>
             </div>
+          </div>
+        </div>
+
+        {/* The last line of the site — who built it */}
+        <div className="border-t border-white/10 bg-black/25">
+          <div className="mx-auto max-w-[1320px] px-6 pt-4 pb-40 sm:pb-4 flex items-center justify-center">
+            <p
+              data-testid="footer-credit"
+              className="flex items-center gap-1.5 text-[12.5px] text-white/40 text-center"
+            >
+              Made with
+              <Heart
+                size={13}
+                strokeWidth={0}
+                aria-label="love"
+                className="fill-[#E5484D] animate-heartbeat motion-reduce:animate-none shrink-0"
+              />
+              by
+              <a
+                href="https://www.strynkixtechnologies.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="footer-builder"
+                className="font-semibold text-white/60 hover:text-amber transition-colors duration-200 underline-offset-4 hover:underline"
+              >
+                Strynkix Technologies
+              </a>
+            </p>
           </div>
         </div>
       </footer>

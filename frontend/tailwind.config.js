@@ -94,6 +94,12 @@ module.exports = {
           from: { transform: 'translateX(-50%)' },
           to: { transform: 'translateX(0)' }
         },
+        /* Two quick beats, then a rest — a real heartbeat, not a pulse */
+        heartbeat: {
+          '0%, 28%, 70%, 100%': { transform: 'scale(1)' },
+          '14%': { transform: 'scale(1.28)' },
+          '42%': { transform: 'scale(1.18)' }
+        },
         'pulse-ring': {
           '0%': { transform: 'scale(1)', opacity: '0.6' },
           '100%': { transform: 'scale(1.9)', opacity: '0' }
@@ -109,6 +115,7 @@ module.exports = {
         'accordion-up': 'accordion-up 0.2s ease-out',
         marquee: 'marquee 40s linear infinite',
         'marquee-reverse': 'marquee-reverse 45s linear infinite',
+        heartbeat: 'heartbeat 2.4s ease-in-out infinite',
         'pulse-ring': 'pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'scroll-dot': 'scroll-dot 1.8s ease-in-out infinite'
       }
