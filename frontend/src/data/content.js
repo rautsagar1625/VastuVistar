@@ -304,7 +304,8 @@ export const CLIENT_LOGOS = [
 export const CLIENTS = [
   "Ram Engineering",
   "Bindras Kitchen",
-  "Harshovgal Trans",
+  "Harshovgal",
+  "Trans",
   "Jal",
   "Victora Auto",
   "Asiatech Coatings Pvt. Ltd.",
