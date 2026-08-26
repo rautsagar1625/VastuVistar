@@ -29,6 +29,7 @@ export const IMG = {
   heroHome: "/assets/aerial-site.jpg",
   ccRoad: "/assets/cc-road.jpeg",
   epoxy: "/assets/epoxy-flooring.jpeg",
+  residential: "/assets/residential.jpeg",
   peb: u("1496247749665-49cf5b1022e9"),
   steelStructure: "/assets/steel-structure.jpg",
   siteTeam: "/assets/site-team.jpg",
@@ -136,8 +137,8 @@ export const SERVICES = [
     id: "residential-commercial",
     name: "Residential & Commercial Buildings",
     icon: "Building",
-    image: IMG.multistorey,
-    cardBg: IMG.multistorey,
+    image: IMG.residential,
+    cardBg: IMG.residential,
     short: "Homes, offices and retail — built and finished complete.",
     description:
       "Apartment buildings, bungalows, office blocks and retail spaces delivered from foundation to final finish. Structure, masonry, plaster, waterproofing, flooring, joinery and painting are sequenced by one team, so the finish quality matches the structural quality.",
@@ -187,6 +188,7 @@ export const NOTABLE_CAPABILITIES = [
   { name: "RCC Frame Structures", image: IMG.concretePour },
   { name: "CC Roads & Site Development", image: IMG.siteTeam },
   { name: "Commercial Buildings", image: IMG.highrise },
+  { name: "Residential Buildings", image: IMG.residential },
   { name: "Structural Steel Fabrication", image: IMG.steelStructure },
 ];
 
