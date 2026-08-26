@@ -69,7 +69,7 @@ export default function Navbar() {
               ))}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-5 shrink-0 ml-auto">
+            <div className="hidden lg:flex items-center gap-4 xl:gap-5 shrink-0 ml-auto">
               <div className="flex items-center gap-2 text-[14.5px] font-semibold text-white/85">
                 <Phone size={17} strokeWidth={2} className="shrink-0" />
                 <a
@@ -79,11 +79,13 @@ export default function Navbar() {
                 >
                   {CONTACT.phone}
                 </a>
-                <span className="text-white/35" aria-hidden="true">/</span>
+                {/* The second number needs room the 1024–1279 band does not
+                    have; below xl the header would overflow its own width. */}
+                <span className="hidden xl:inline text-white/35" aria-hidden="true">/</span>
                 <a
                   href={CONTACT.phoneAltHref}
                   data-testid="nav-phone-alt"
-                  className="hover:text-white transition-colors duration-200"
+                  className="hidden xl:inline hover:text-white transition-colors duration-200"
                 >
                   {CONTACT.phoneAlt}
                 </a>

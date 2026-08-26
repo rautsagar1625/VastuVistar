@@ -65,7 +65,7 @@ function ProjectModal({ project, onClose }) {
   return (
     <motion.div
       data-testid="project-modal"
-      className="fixed inset-0 z-[70] flex items-start justify-center p-4 md:p-8 overflow-y-auto"
+      className="fixed inset-0 z-[70] flex items-center justify-center p-4 md:p-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -76,7 +76,7 @@ function ProjectModal({ project, onClose }) {
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: 30, opacity: 0 }}
         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        className="relative bg-white w-full max-w-3xl my-8"
+        className="relative bg-white w-full max-w-3xl lg:max-w-[1100px] max-h-[92vh] flex flex-col lg:flex-row overflow-hidden"
         role="dialog"
         aria-modal="true"
         aria-label={project.name}
@@ -90,9 +90,18 @@ function ProjectModal({ project, onClose }) {
           <X size={20} strokeWidth={2} />
         </button>
 
-        <img src={project.image} alt={project.name} className="w-full aspect-[16/9] object-cover" />
+        {/* Image column — a band on narrow screens, a full-height panel beside
+            the detail on wide ones, so a laptop uses its width instead of
+            forcing a long scroll. */}
+        <div className="shrink-0 lg:w-[44%] lg:h-auto bg-navy">
+          <img
+            src={project.image}
+            alt={project.name}
+            className="w-full h-[34vh] min-h-[180px] lg:h-full lg:max-h-none object-cover"
+          />
+        </div>
 
-        <div className="p-8 md:p-10">
+        <div className="flex-1 overflow-y-auto p-8 md:p-10">
           <span className="inline-block bg-brand text-white eyebrow px-3 py-1.5">{project.category}</span>
           <h2 className="display-heavy text-ink text-3xl md:text-[38px] leading-[1.06] mt-4">{project.name}</h2>
           <p className="text-slate mt-4 text-[16px] leading-relaxed">{project.tagline}</p>
