@@ -444,6 +444,19 @@ export const PROJECTS = [
     tagline:
       "A reinforced concrete framed structure under construction at Talegaon — slab reinforcement tied and shuttered across the floor plate, ready for pour.",
   },
+  {
+    slug: "residential-apartment-building",
+    name: "Residential Apartment Building",
+    location: "",
+    category: "Residential",
+    year: "Completed",
+    image: IMG.residential,
+    gallery: [IMG.residential],
+    services: ["Residential & Commercial Buildings", "RCC Construction"],
+    scope: ["Civil Execution"],
+    tagline:
+      "A five-storey RCC apartment building finished and handed over — balconies, staircase core and lift shaft complete, with external painting and site levelling done.",
+  },
 ];
 
 export const STATS = [

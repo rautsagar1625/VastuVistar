@@ -98,7 +98,7 @@ function ProjectModal({ project, onClose }) {
           <p className="text-slate mt-4 text-[16px] leading-relaxed">{project.tagline}</p>
 
           <div className="grid sm:grid-cols-3 gap-px bg-mist mt-8">
-            {facts.map(([Icon, k, v]) => (
+            {facts.filter(([, , v]) => v).map(([Icon, k, v]) => (
               <div key={k} className="bg-cloud p-5">
                 <Icon size={17} strokeWidth={1.75} className="text-amber" />
                 <div className="eyebrow text-slate/50 mt-3">{k}</div>
@@ -193,7 +193,9 @@ export default function Portfolio() {
                   <ProjectCard project={p} onOpen={setOpen} />
                   <div className="mt-3">
                     <h3 className="display-heavy text-ink text-[15px]">{p.name}</h3>
-                    <p className="text-sm text-slate/70">{p.location} · {p.year}</p>
+                    <p className="text-sm text-slate/70">
+                      {[p.location, p.year].filter(Boolean).join(" · ")}
+                    </p>
                   </div>
                 </div>
               </Reveal>
