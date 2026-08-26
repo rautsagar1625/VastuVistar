@@ -137,7 +137,7 @@ export default function About() {
           <Reveal>
             <Label>What We Specialise In</Label>
             <h2 className="display-heavy text-ink text-3xl md:text-[42px] mt-6">
-              Six verticals, one team
+              Seven verticals, one team
             </h2>
           </Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-mist mt-12" data-testid="about-service-grid">

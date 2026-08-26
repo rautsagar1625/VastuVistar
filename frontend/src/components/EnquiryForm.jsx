@@ -11,6 +11,7 @@ const SERVICES_FULL = [
   "CC Road & Land Development",
   "Residential & Commercial Buildings",
   "Fabrication Services",
+  "Epoxy Flooring",
   "Multiple / Not sure yet",
 ];
 const PROJECT_TYPES = ["Industrial", "Commercial", "Residential", "Infrastructure", "Other"];

@@ -2,12 +2,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import useEmblaCarousel from "embla-carousel-react";
 import {
-  KeyRound, Factory, Building2, Route, Building, Wrench, ArrowRight, ArrowLeft, Check,
+  KeyRound, Factory, Building2, Route, Building, Wrench, Layers, ArrowRight, ArrowLeft, Check,
 } from "lucide-react";
 import Label from "@/components/Label";
 import { SERVICES } from "@/data/content";
 
-const ICONS = { KeyRound, Factory, Building2, Route, Building, Wrench };
+const ICONS = { KeyRound, Factory, Building2, Route, Building, Wrench, Layers };
 const AUTOPLAY_MS = 4200;
 
 export default function ServicesCarousel() {
@@ -70,7 +70,7 @@ export default function ServicesCarousel() {
             A comprehensive range of<br className="hidden sm:block" /> civil development services
           </h2>
           <p className="text-[16px] leading-[1.75] text-slate/90 mt-5 max-w-[52ch]">
-            Six verticals, one accountable team — the same firm
+            Seven verticals, one accountable team — the same firm
             <span className="text-ink font-semibold"> designs it, sanctions it, builds it and
             hands it over.</span>
           </p>

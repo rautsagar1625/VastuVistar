@@ -28,6 +28,7 @@ export const CONTACT = {
 export const IMG = {
   heroHome: "/assets/aerial-site.jpg",
   ccRoad: "/assets/cc-road.jpeg",
+  epoxy: "/assets/epoxy-flooring.jpeg",
   peb: u("1496247749665-49cf5b1022e9"),
   steelStructure: "/assets/steel-structure.jpg",
   siteTeam: "/assets/site-team.jpg",
@@ -65,7 +66,7 @@ export const IMG = {
   person4: u("1573497019940-1c28c88b4f3e", 800),
 };
 
-/** The six service verticals from the company profile. */
+/** The service verticals. Six from the company profile, plus epoxy flooring. */
 export const SERVICES = [
   {
     id: "turnkey-projects",
@@ -161,6 +162,22 @@ export const SERVICES = [
       "Staircases, railings, gratings and canopies",
       "Welding to specification with surface treatment",
       "Site erection handled by in-house crews",
+    ],
+  },
+  {
+    id: "epoxy-flooring",
+    name: "Epoxy Flooring",
+    icon: "Layers",
+    image: IMG.epoxy,
+    cardBg: IMG.epoxy,
+    short: "Seamless industrial floors laid over a prepared slab.",
+    description:
+      "Epoxy floor coatings for factory, warehouse and workshop floors — surface preparation, primer and topcoat laid to a seamless, dust-free finish, with demarcated walkways and bay markings set out to your layout.",
+    features: [
+      "Surface preparation, grinding and priming",
+      "Seamless epoxy topcoat in the colour specified",
+      "Walkway, bay and safety-line demarcation",
+      "Dust-free finish, easy to clean and maintain",
     ],
   },
 ];
@@ -428,7 +445,7 @@ export const PROJECTS = [
 
 export const STATS = [
   { value: 18, suffix: "+", label: "Projects Delivered" },
-  { value: 6, suffix: "", label: "Service Verticals" },
+  { value: 7, suffix: "", label: "Service Verticals" },
   { value: 4.5, decimals: 1, suffix: "L+", label: "Sq.Ft Built-up" },
   { value: 100, suffix: "%", label: "Completion Rate" },
 ];
