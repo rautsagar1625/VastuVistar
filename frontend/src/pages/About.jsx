@@ -90,22 +90,25 @@ export default function About() {
             </h2>
             <div className="mt-7 space-y-5 text-[17px] leading-[1.75] text-slate">
               <p>
-                Vastu Vistar was built around a simple frustration our clients kept describing:
-                too many agencies, too many handoffs, and nobody who owned the outcome. We put
-                design, sanctioning, execution and handover under a single roof so there is one
-                team to hold responsible — and one team that takes the credit.
+                <strong className="text-ink font-semibold">Vastu Vistar</strong> is built on a
+                simple yet powerful foundation — to make the entire journey of building a space
+                seamless, transparent and hassle-free for our clients.
               </p>
               <p>
-                From industrial to commercial spaces, we cover the full range of civil
-                construction — turnkey projects, PEB buildings, RCC construction, CC roads and
-                land development, residential and commercial buildings, and structural
-                fabrication.
+                From{" "}
+                <strong className="text-ink font-semibold">
+                  sanctioning and approvals to architectural drawings and complete construction
+                </strong>
+                , we bring every essential service together under one roof. Our approach is
+                centred around understanding the client's vision, transforming it into practical
+                designs, and executing the project with quality and precision.
               </p>
               <p>
-                Our commitment to excellence, safety and timely execution has earned us the trust
-                of clients and partners alike. We use advanced construction techniques, quality
-                materials and skilled manpower to ensure every project meets the highest
-                standards.
+                With Vastu Vistar, clients get{" "}
+                <strong className="text-ink font-semibold">
+                  one trusted partner from the first drawing to the final structure
+                </strong>{" "}
+                — making the process simpler, more coordinated and more reliable.
               </p>
             </div>
           </Reveal>
